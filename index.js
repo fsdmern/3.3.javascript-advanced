@@ -72,3 +72,6 @@ document.write('<p><strong>Callback Function </strong></p>');
 // }
 
 // processUserInput(greet);
+
+//Promises, Fetch, Async/Await
+document.write('<p><strong>Promises, Fetch, Async/Await </strong></p>');
