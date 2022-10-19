@@ -59,6 +59,8 @@ document.write('<p><strong>Try Catch </strong></p>');
 //   alert('An error occured inside try block: ' + e);
 // }
 
+//Promises, Fetch, Async/Await
+document.write('<p><strong>Promises, Fetch, Async/Await </strong></p>');
 //Call back function
 document.write('<p><strong>Callback Function </strong></p>');
 //A function will be passed to another function as an argument
@@ -72,6 +74,63 @@ document.write('<p><strong>Callback Function </strong></p>');
 // }
 
 // processUserInput(greet);
+//states: pending, fullfilled or rejected
+//result: undefined, value (when resolved), error (when rejected)
+let promise = new Promise(function (resolve, reject) {
+  resolve(); //fullfilled
+  reject(); //rejected
+});
 
-//Promises, Fetch, Async/Await
-document.write('<p><strong>Promises, Fetch, Async/Await </strong></p>');
+let myPromise = new Promise(function (right, wrong) {
+  const myProduct = 'Apple 13';
+  const deliveredProduct = 'Apple 11';
+  if (myProduct === deliveredProduct) {
+    right();
+  } else {
+    wrong();
+  }
+});
+
+myPromise
+  .then(function () {
+    console.log('Right Product Delivered');
+  })
+  .catch(function () {
+    console.log('Sorry. Some thing went wrong');
+  });
+
+let myPromise2 = new Promise(function (resolve, reject) {
+  setTimeout(() => resolve('Work done!'), 5000);
+});
+
+myPromise2.then(
+  (result) => console.log(result),
+  (error) => console.log(error)
+);
+
+//Promise chain
+let myPromise3 = new Promise((resolve, reject) => {
+  resolve('I am block 1');
+});
+
+myPromise3
+  .then(
+    new Promise((resolve, reject) => {
+      resolve('I am block 1a. My work is done');
+    }).then((result1) => {
+      console.log(result1);
+    })
+  )
+  .then((result2) => {
+    console.log(result2);
+  });
+
+//DOM (selecting various html elements)
+
+//Window, Click and other Event Listeners
+
+//Modules (Export Import)
+
+//Cookies, sessionStorage
+
+//Java Script Testing (automated testing with Mocha)
