@@ -608,7 +608,7 @@ document.write('<p><strong>Changing the HTML Elements</strong></p>');
 //element.style.property = style (chanages the style of the element)
 //method: element.setAttribute(attribute, value) (chages the attribute value of HTML element)
 
-//c. Updating and Deleting
+//c. Updating and Delete
 document.write(
   '<p><strong>Updating and Deleting the HTML Elements</strong></p>'
 );
