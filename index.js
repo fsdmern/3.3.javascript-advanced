@@ -475,7 +475,150 @@ html += `</ul>`;
 console.log('This is the html formed with template literals: ' + html);
 document.getElementById('test3').innerHTML = html;
 
+//Browser Environment (BOM)
+document.write('<h2>Browser Environment - BOM</strong></h2>');
+document.write('<h2>Browsers Window</strong></h2>');
+//Browser Window
+document.write(
+  'Browser Inner Width: ' +
+    window.innerWidth +
+    'px <br>' +
+    'Browser Inner Height: ' +
+    window.innerHeight +
+    'px'
+);
+
+document.write('<h2>Window Methods</strong></h2>');
+//Window methods
+document.write(
+  '<ul><li>window.open()</li><li>window.close()</li><li>window.moveTo()</li><li>window.resizeTo()</li></ul>'
+);
+
+document.write('<h2>User Screen</strong></h2>');
+//window screen is designated with window.screen
+//window Properties: screen.width, screen.height,screen.availWidth, screen.availHeight,
+//screen.colorDepth, screen.pixelDepth
+document.write('Screen Width: ' + screen.width + 'px' + '<br>');
+document.write('Screen Height: ' + screen.height + 'px' + '<br>');
+//screen.availWidth => this give width of screen minus the width of windows task bar
+document.write('Screen Availale Width: ' + screen.availWidth + 'px' + '<br>');
+document.write('Screen Availale Height: ' + screen.availHeight + 'px' + '<br>');
+
+//Window color depth => number of bits used to display one clor
+//Present day computers use either 24bit (True colors) or 32bit (deep colors) hardware for color resolution
+document.write('Screen color Depth: ' + screen.colorDepth + ' bit' + '<br>');
+//Window screen pixel Depth => pixel Depth of the screen
+document.write('Screen pixel Depth: ' + screen.pixelDepth + ' bit' + '<br>');
+
+//Location: Denoted with window.location
+//window.location.href => returns the url of the current page
+//.hostname => returns the domain name of the webhost
+//.pathname => returns the path and filename of the current page
+//.protocol => returns the webprotocol used (http: or https:)
+//.assign loads a new document
+document.write('<h2>Location</strong></h2>');
+document.write(
+  'Page Location via window.location : ' + window.location + '<br>'
+);
+document.write(
+  'Page Location via window.location.href : ' + window.location.href + '<br>'
+);
+document.write(
+  'Host Name via window.location.hostname : ' +
+    window.location.hostname +
+    '<br>'
+);
+
+document.write(
+  'Port No. via window.location.port : ' + window.location.port + '<br>'
+);
+
+document.write(
+  'Path Name via window.location.pathname : ' +
+    window.location.pathname +
+    '<br>'
+);
+
+document.write(
+  'Protocol via window.location.protocol : ' + window.location.protocol + '<br>'
+);
+
+//History: denoted with window.history => similar to back button in browser
+//history.back() and history.forward() => similar to forward button in browser
+document.write('<h2>Hisory</strong></h2>');
+function backButton() {
+  window.history.back();
+}
+
+//Navigator: It contains the information about the user's browser
+//window.navigator
+//options: navigator.cookieEnabled (true or false), navigator.appCodeName, navigator.platform
+document.write('<h2>Navigator</strong></h2>');
+document.write('Cookie Status : ' + window.navigator.cookieEnabled + '<br>');
+document.write('App Code Name : ' + window.navigator.appName + '<br>'); //Deprecated
+document.write('Platform Name : ' + window.navigator.platform + '<br>');
+document.write('Language Name : ' + window.navigator.language + '<br>');
+document.write('Whether browser online : ' + window.navigator.onLine + '<br>');
+
+//Popup Boxes:
+//Alert (use clicks to proceed), Confirm (Ok or Cancel), Prompt (take input from the user)
+//Syntax window.alert but can also be used without window word
+document.write('<h2>Popup Alert</strong></h2>');
+
+//Timing Events
+document.write('<h2>Timing</strong></h2>');
+//setTimeout => setTimeout(function, milliseconds) => Executes after specified waiting time is over
+//setInterval => setTimeout(function, milliseconds) => Executes the given function continously at specified interval
+//clearTimeout => to stop the excution of a running setTimeout function
+//clearInterval => to stop the excution of a running setInterval function
+
+//setTimeout and setInterval
+// function testSetTimeout() {
+//   document.write('I am setTimeout function');
+// }
+// setTimeout(testSetTimeout, 5000);
+
+//Cookies: Cookies are a way to remember information about the user
+//They are stored in small text files inside the users computer
+//They are stored in key: value format
+document.write('<h2>Cookies</strong></h2>');
+//Create a cookie
+//document.cookie = "username=John Doe"
+//Specify cookie expiry
+//document.cookie = "username=John Doe; expires=Tue, 25 Pct 2022 08:45:00 GMT"
+//Reading of cookie: document.cookie
+//Change a cookie is similar to creating a cookie
+//Delete a cookie: Automatically get removed after expiry
+
+document.write('<h2>Document Object Model - DOM</strong></h2>');
 //DOM (selecting various html elements)
+//Methods: Actions that can be performed on HTML elements
+//Properties: Are values of html elements that we can set or modify
+//Example:
+//document.getElementById => Method
+//.innerHTML => property
+//Categories:
+document.write('<p><strong>Finding HTML Elements</strong></p>');
+//a. Finding HTML elements
+//document.getElementById(id), document.getElementsByTagName(name),document.getElementsByClassName(name)
+document.write('<p><strong>Changing the HTML Elements</strong></p>');
+//b. Changing HTML Elements
+//element.innerHTML (this repalces the contents inside the HTML element)
+//element.attribute (change attribute value)
+//element.style.property = style (chanages the style of the element)
+//method: element.setAttribute(attribute, value) (chages the attribute value of HTML element)
+
+//c. Updating and Deleting
+document.write(
+  '<p><strong>Updating and Deleting the HTML Elements</strong></p>'
+);
+//document.createElement(element)
+//document.removeChild(element)
+//document.appendChild(element)
+//document.replaceChild(new, old)
+//document.write(text)
+
+//Java Script
 
 //Dom Window, Click and other Event Listeners
 
