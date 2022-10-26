@@ -568,7 +568,7 @@ document.write('<h2>Popup Alert</strong></h2>');
 //Timing Events
 document.write('<h2>Timing</strong></h2>');
 //setTimeout => setTimeout(function, milliseconds) => Executes after specified waiting time is over
-//setInterval => setTimeout(function, milliseconds) => Executes the given function continously at specified interval
+//setInterval => setInterval(function, milliseconds) => Executes the given function continously at specified interval
 //clearTimeout => to stop the excution of a running setTimeout function
 //clearInterval => to stop the excution of a running setInterval function
 
@@ -595,6 +595,7 @@ document.write('<h2>Document Object Model - DOM</strong></h2>');
 //Methods: Actions that can be performed on HTML elements
 //Properties: Are values of html elements that we can set or modify
 //Example:
+//=================================
 //document.getElementById => Method
 //.innerHTML => property
 //Categories:
@@ -608,19 +609,53 @@ document.write('<p><strong>Changing the HTML Elements</strong></p>');
 //element.style.property = style (chanages the style of the element)
 //method: element.setAttribute(attribute, value) (chages the attribute value of HTML element)
 
+let tagValue = document.getElementsByTagName('p');
+document.write(tagValue[0].innerHTML + '<br>');
+document.write(tagValue[1].innerHTML + '<br>');
+document.write(tagValue[2].innerHTML + '<br>');
+
+let paragraph = document.getElementById('paragraph');
+paragraph.setAttribute('style', 'color:blue; font-weight: bold');
+
 //c. Updating and Delete
 document.write(
   '<p><strong>Updating and Deleting the HTML Elements</strong></p>'
 );
 //document.createElement(element)
+let myNewElement = document.createElement('h3');
+// let innerText = document.createTextNode('This is h3 element text');
+// myNewElement.appendChild(innerText);
+let myDiv = document.getElementById('append');
+myDiv.appendChild(myNewElement);
+
+// document.write(myNewElement[0]);
+// // myNewElement.setAttribute('id', 'heading');
+// myNewElement.getElementById('heading').innerHTML = 'This is header 6 Text';
+// document.write(myNewElement);
+
 //document.removeChild(element)
 //document.appendChild(element)
 //document.replaceChild(new, old)
 //document.write(text)
 
-//Java Script
-
 //Dom Window, Click and other Event Listeners
+//User Events
+//Mouse Click, Webpage loading, image loading, mouse hover, input field has changed, html form is submitted, user strokes a key
+function changeText(id) {
+  id.innerHTML = 'Hello World!';
+}
+
+function displayDate() {
+  document.getElementById('date').innerHTML = Date();
+}
+
+function mouseOver(id) {
+  id.innerHTML = 'This is mouse over';
+}
+
+function mouseOut(id) {
+  id.innerHTML = 'This is mouse out';
+}
 
 //Modules (Export Import)
 

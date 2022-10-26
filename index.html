@@ -12,7 +12,29 @@
     <h2 id="test2"></h2>
     <h2 id="test3"></h2>
     <h2 id="window-size"></h2>
-    <input type="button" value="Back" onclick="backButton()" />
+    <p id="paragraph">This is test paragraph 1</p>
+    <!-- <p>This is test paragraph 2</p>
+    <p>This is test paragraph 3</p> -->
+    <div id="append">
+      <p>This a paragraph a inside append id</p>
+      <p>This a paragraph b inside append id</p>
+    </div>
+    <div class="testClass"></div>
+
+    <h1 onclick="changeText(this)">Click me to see new Text</h1>
+
+    <input onclick="displayDate()" type="button" value="Click Me" />
+    <div id="date"></div>
+    <br />
+
+    <div
+      onmouseover="mouseOver(this)"
+      onmouseout="mouseOut(this)"
+      style="background-color: gold; width: 200px; height: 150px"
+    >
+      Mouse Over Me
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
