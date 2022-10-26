@@ -651,10 +651,18 @@ function displayDate() {
 
 function mouseOver(id) {
   id.innerHTML = 'This is mouse over';
+  id.setAttribute(
+    'style',
+    'background-color: red;color: white;width: 200px; height: 150px'
+  );
 }
 
 function mouseOut(id) {
   id.innerHTML = 'This is mouse out';
+  id.setAttribute(
+    'style',
+    'background-color: blue;color:white;width: 200px; height: 150px'
+  );
 }
 
 //Modules (Export Import)
