@@ -665,6 +665,62 @@ function mouseOut(id) {
   );
 }
 
+function onchangeUpperCase() {
+  let text = document.getElementById('fname');
+  text.value = text.value.toUpperCase();
+}
+
+//Event Listeners
+//Using event listener, we can listen multiple events on a single element
+//Syntax: document.getElementById("Test").addEventListener("click",someFunction)
+
+document.getElementById('btn').addEventListener('mouseover', myMouseOver);
+function myMouseOver() {
+  document.getElementById('ptext').innerHTML += 'You had moused over!' + '<br>';
+}
+
+document.getElementById('btn').addEventListener('mouseout', myMouseOut);
+function myMouseOut() {
+  document.getElementById('ptext').innerHTML += 'You had moused out!' + '<br>';
+}
+
+document.getElementById('btn').addEventListener('click', myClick);
+function myClick() {
+  document.getElementById('ptext').innerHTML +=
+    'You had clicked the button!' + '<br>';
+}
+
+document.getElementById('btn').addEventListener('click', myAlert);
+function myAlert() {
+  alert('Hello World!');
+}
+//HTML Document Navigation
+//document.body - Body of the document
+//document.documentElement - Full document including the header
+//parentNode & childNodes
+//first child & last child
+//siblings: nextSibling & previousSbling
+{
+  /* <html>
+  <head></head>
+  <body>
+    <div>
+      <p></p> //first child
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p> //last child
+    </div>
+    <div></div> //siblings
+    <div></div> //siblings
+    <div></div>
+    <div></div>
+  </body>
+</html>; */
+}
+document.getElementById('docnav2').innerHTML =
+  document.getElementById('docnav1').firstChild.nodeValue;
+
 //Modules (Export Import)
 
 //Cookies, sessionStorage
